@@ -1,8 +1,21 @@
-import { useRef } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { styled, alpha } from '@mui/material/styles'
 import { Search as SearchIcon } from '@mui/icons-material'
-import { Typography, Toolbar, Box, AppBar, InputBase } from '@mui/material'
-import {LocalPizzaOutlined as PizzaIcon} from '@mui/icons-material';
+import {
+	Typography,
+	Toolbar,
+	Box,
+	AppBar,
+	InputBase,
+	Autocomplete,
+} from '@mui/material'
+
+import {
+	LocalPizzaOutlined as PizzaIcon,
+	TagFaces as JokesIcon,
+	CompareArrows as CompareArrowsIcon,
+} from '@mui/icons-material'
 
 import Drawer from './Drawer'
 
@@ -49,20 +62,33 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }))
 
 const menuList1 = [
-	['Pizza Time', <PizzaIcon />]
+	['Homepage', <PizzaIcon />],
+	['Pizza Time', <PizzaIcon />],
+	['Dad Jokes', <JokesIcon />],
+	['Age Compare', <CompareArrowsIcon />],
 ]
-const menuList2 = [
-]
+
+const menuList2 = []
+const menuNames = menuList1.map((el) => el[0])
 
 export default function SearchAppBar({ title, anchor }) {
-	const searchRef = useRef()
+	const [search, setSearch] = useState(menuNames[0])
+	let navigate = useNavigate()
 
-	const handleSearch = (input) => {
-		console.log(input)
-	}
+	useEffect(() => {
+		if (search === '' || !search) {
+			return
+		} else
+			navigate(
+				`/${
+					search === 'Homepage' ? '' : search.split(' ').join('-').toLowerCase()
+				}`,
+				{ replace: true }
+			)
+	}, [search])
 
 	return (
-		<Box sx={{ flexGrow: 1, margin: -.1 }}>
+		<Box sx={{ flexGrow: 1, margin: -0.1 }}>
 			<AppBar position="static">
 				<Toolbar>
 					<Drawer menuList1={menuList1} menuList2={menuList2} anchor={anchor} />
@@ -78,14 +104,28 @@ export default function SearchAppBar({ title, anchor }) {
 						<SearchIconWrapper>
 							<SearchIcon />
 						</SearchIconWrapper>
-						<StyledInputBase
-							component="form"
-							placeholder="Search…"
-							inputProps={{ 'aria-label': 'search' }}
-							onChange={() => handleSearch(searchRef.current.value)}
-							inputRef={searchRef}
-							id="search"
-							name="search"
+						<Autocomplete
+							inputValue={search}
+							onInputChange={(event, newValue) => {
+								setSearch(newValue)
+							}}
+							id="combo-box-demo"
+							options={menuNames}
+							style={{ width: 300 }}
+							renderInput={(params) => {
+								const { InputProps, ...rest } = params
+								return (
+									<StyledInputBase
+										// component="form"
+										placeholder="Search…"
+										inputProps={{ 'aria-label': 'search' }}
+										id="search"
+										name="search"
+										{...params.InputProps}
+										{...rest}
+									/>
+								)
+							}}
 						/>
 					</Search>
 				</Toolbar>
