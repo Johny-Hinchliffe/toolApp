@@ -1,14 +1,15 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { Link, BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from '@mui/material/styles'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import theme from './theme'
 import { MainStore } from './contexts/MainContext'
 import SearchMenu from './components/SearchMenu'
-import Drawer from './components/Drawer'
 import PizzaTime from './components/PizzaTime'
 import DadJoke from './components/DadJoke'
 import Homepage from './components/Homepage'
 import ContentLayout from './components/mini-components/ContentLayout'
 import AgeCompare from './components/AgeCompare'
+import Settings from './components/Settings'
+import CoinFlip from './components/CoinFlip'
 
 function App() {
 	return (
@@ -34,6 +35,8 @@ function App() {
 								path="/age-compare"
 								element={<ContentLayout content={<AgeCompare />} />}
 							/>
+							<Route path="/coin-flip" element={<ContentLayout content={<CoinFlip />}/>} />
+							<Route path="/settings" element={<ContentLayout content={<Settings />}/>} />
 						</Routes>
 					</ThemeProvider>
 				</MainStore>

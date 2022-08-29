@@ -1,11 +1,9 @@
-import { useState } from 'react'
-
 import { Card, CardContent, Box } from '@mui/material'
 
 import AccordionItem from './Accordion'
 
 const AgeCompare = ({
-	setState,
+	
 	inputNames,
 	title,
 	accordionContent,

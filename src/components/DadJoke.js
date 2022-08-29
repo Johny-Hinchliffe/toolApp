@@ -8,11 +8,11 @@ import {
 	IconButton,
 	Typography,
 } from '@mui/material'
-import { Favorite as FavouriteIcon } from '@mui/icons-material'
+
 import AccordionItem from './mini-components/Accordion'
 
 const DadJoke = () => {
-	const [joke, setJoke] = useState(null)
+	const [joke, setJoke] = useState('Ready to Laugh?')
 
 	// USING ASYNC/AWAIT
 	async function generateJoke() {
@@ -28,9 +28,7 @@ const DadJoke = () => {
 		setJoke(data.joke)
 	}
 
-	useEffect(() => {
-		generateJoke()
-	}, [])
+	
 
 	return (
 		<>
@@ -49,7 +47,7 @@ const DadJoke = () => {
 						}}
 						textAlign="center"
 					>
-						<Typography variant="body2" color="text.secondary">
+						<Typography variant="h5" color="text.secondary">
 							{joke}
 						</Typography>
 					</Box>

@@ -15,6 +15,8 @@ import {
 	LocalPizzaOutlined as PizzaIcon,
 	TagFaces as JokesIcon,
 	CompareArrows as CompareArrowsIcon,
+	Settings as SettingsIcon,
+	MonetizationOnOutlined as MonetizationOnOutlinedIcon
 } from '@mui/icons-material'
 
 import Drawer from './Drawer'
@@ -66,9 +68,10 @@ const menuList1 = [
 	['Pizza Time', <PizzaIcon />],
 	['Dad Jokes', <JokesIcon />],
 	['Age Compare', <CompareArrowsIcon />],
+	['Coin Flip', < MonetizationOnOutlinedIcon/>]
 ]
 
-const menuList2 = []
+const menuList2 = [['Settings', <SettingsIcon />],]
 const menuNames = menuList1.map((el) => el[0])
 
 export default function SearchAppBar({ title, anchor }) {
@@ -96,11 +99,11 @@ export default function SearchAppBar({ title, anchor }) {
 						variant="h6"
 						noWrap
 						component="div"
-						sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+						sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
 					>
 						{title}
 					</Typography>
-					<Search>
+					{/* <Search>
 						<SearchIconWrapper>
 							<SearchIcon />
 						</SearchIconWrapper>
@@ -127,7 +130,7 @@ export default function SearchAppBar({ title, anchor }) {
 								)
 							}}
 						/>
-					</Search>
+					</Search> */}
 				</Toolbar>
 			</AppBar>
 		</Box>

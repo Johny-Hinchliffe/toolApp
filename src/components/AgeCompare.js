@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import {
 	Card,
@@ -6,12 +6,10 @@ import {
 	Box,
 	TextField,
 	Typography,
-	Button,
 } from '@mui/material'
 
 import ageDiff from './functions/ageDiff'
 import AccordionItem from './mini-components/Accordion'
-import CardLayout from './mini-components/CardLayout'
 import Modal from './mini-components/Modal'
 
 const AgeCompare = () => {

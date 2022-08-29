@@ -29,54 +29,6 @@ const AgeCompare = () => {
 		)
 	}
 
-
-	// const content = (
-	// 	<>
-	// 		<Typography align="center" variant="h6">
-	// 			Person 1
-	// 		</Typography>
-	// 		<TextField
-	// 			id="standard-basic"
-	// 			label="Name"
-	// 			name="name1"
-	// 			variant="standard"
-	// 		/>
-	// 		<TextField
-	// 			type="number"
-	// 			id="standard-basic"
-	// 			name="age2"
-	// 			label="Birth Year"
-	// 			variant="standard"
-	// 		/>
-	// 		<Typography align="center" variant="h6" sx={{ marginTop: '20px' }}>
-	// 			Person 2
-	// 		</Typography>
-	// 		<TextField
-	// 			id="standard-basic"
-	// 			label="Name"
-	// 			name="name2"
-	// 			variant="standard"
-	// 		/>
-	// 		<TextField
-	// 			type="number"
-	// 			id="standard-basic"
-	// 			label="Birth Year"
-	// 			name="age2"
-	// 			variant="standard"
-	// 		/>
-	// 		<Box textAlign="center">
-	// 			<Button
-	// 				variant="outlined"
-	// 				size="medium"
-	// 				onClick={() => handleSubmit()}
-	// 				sx={{ marginTop: '20px' }}
-	// 			>
-	// 				Go
-	// 			</Button>
-	// 		</Box>
-	// 	</>
-	// )
-
 	return (
 		<>
 			<AccordionItem title="Age Compare" content="explaination" />

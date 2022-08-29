@@ -11,6 +11,7 @@ import {
 	ListItemButton,
 	ListItemIcon,
 	ListItemText,
+	Typography
 } from '@mui/material'
 
 import { Menu as MenuIcon } from '@mui/icons-material'
@@ -46,6 +47,10 @@ export default function TemporaryDrawer({
 			onClick={toggleDrawer(anchor, false)}
 			onKeyDown={toggleDrawer(anchor, false)}
 		>
+			<Box textAlign="center">
+
+			<Typography variant='h6'>Tool List</Typography>
+			</Box>
 			<List>
 				{menuList1.map((text) => (
 					<ListItem key={text[0]} disablePadding>
