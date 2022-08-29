@@ -28,8 +28,6 @@ const DadJoke = () => {
 		setJoke(data.joke)
 	}
 
-	
-
 	return (
 		<>
 			<AccordionItem
@@ -52,7 +50,14 @@ const DadJoke = () => {
 						</Typography>
 					</Box>
 
-					<Box mt={3} position="relative" bottom="0px">
+					<Box
+						sx={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+						}}
+						textAlign="center"
+					>
 						<CardActions disableSpacing>
 							{/* <IconButton aria-label="add to favorites">
 								<FavouriteIcon />

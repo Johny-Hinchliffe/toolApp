@@ -73,7 +73,7 @@ const AgeCompare = () => {
 							name="age2"
 							variant="standard"
 						/>
-						<Box textAlign="center">
+						<Box sx={{marginTop: '20px'}} textAlign="center">
 							<Modal content={answer} title={question} button="Calculate" />
 						</Box>
 					</CardContent>

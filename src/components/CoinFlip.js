@@ -44,7 +44,7 @@ const CoinFlip = () => {
 
 	return (
 		<>
-			<AccordionItem title="Coin Flip" content="Heads or Tails?" />
+			<AccordionItem title="Coin Flip" content="Time to flip! Heads or Tails?                                " />
 			<Card sx={{ minWidth: 275 }} elevation={24}>
 				<CardContent>
 					<Box textAlign="center">

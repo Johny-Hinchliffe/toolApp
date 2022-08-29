@@ -9,7 +9,7 @@ import {
 	ExpandMore as ExpandMoreIcon,
 	ArrowForwardIosSharp as ArrowForwardIosSharpIcon,
 } from '@mui/icons-material'
-
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { styled } from '@mui/material/styles'
 
 const AccordionSummary = styled((props) => (
@@ -23,17 +23,25 @@ const AccordionSummary = styled((props) => (
 		transform: 'rotate(90deg)',
 	},
 	'& .MuiAccordionSummary-content': {
-		marginLeft: theme.spacing(1),
+		marginLeft: '20%',
 	},
 }))
 
 const AccordionItem = ({ title, content }) => {
 	return (
-		<Box textAlign='center' sx={{marginBottom: '10px'}}>
-
+		
+<Box
+						sx={{
+							display: 'absolute',
+							justifyContent: 'center',
+							alignItems: 'center',
+							
+						}}
+						textAlign="center"
+					>
 		<Accordion elevation={0} sx={{backgroundColor: 'transparent'}}>
 			<AccordionSummary
-				expandIcon={<ExpandMoreIcon />}
+				expandIcon={<HelpOutlineIcon />}
 				aria-controls="panel1a-content"
 				id="panel1a-header"
 				>
