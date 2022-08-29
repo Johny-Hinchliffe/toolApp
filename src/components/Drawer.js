@@ -55,7 +55,7 @@ export default function TemporaryDrawer({
 				{menuList1.map((text) => (
 					<ListItem key={text[0]} disablePadding>
 						<Link
-							to={`/${text[0].split(' ').join('-').toLowerCase()}`}
+							to={text[0] === 'Homepage' ? '/' : `/${text[0].split(' ').join('-').toLowerCase()}` }
 							style={{ textDecoration: 'none' }}
 						>
 							<ListItemButton>
