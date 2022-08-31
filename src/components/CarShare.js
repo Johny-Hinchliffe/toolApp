@@ -13,11 +13,7 @@ import AccordionItem from './mini-components/Accordion'
 import Modal from './mini-components/Modal'
 
 const carShare = (mpg, distance, fuelPrice, people) => {
-	if(isNaN(mpg+distance+fuelPrice+people)){
-		return 'false'
-	} else if (!mpg || !distance || !fuelPrice || !people){
-		return 'false'
-	}
+	
 	
 	const milesPerLitre = Number(mpg) / 4.546
 	const poundPerLitre = Number(fuelPrice) / milesPerLitre
@@ -29,6 +25,7 @@ const carShare = (mpg, distance, fuelPrice, people) => {
 	// console.log('334'.split('.').length)
 
 	const addZeros = (el) => {
+		console.log(el)
 		el = bigRound(el)
 		const splitted = String(el).split('.')
 				if (splitted.length === 1) {
