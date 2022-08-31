@@ -13,6 +13,12 @@ import AccordionItem from './mini-components/Accordion'
 import Modal from './mini-components/Modal'
 
 const carShare = (mpg, distance, fuelPrice, people) => {
+	if(isNaN(mpg+distance+fuelPrice+people)){
+		return 'false'
+	} else if (!mpg || !distance || !fuelPrice || !people){
+		return 'false'
+	}
+	
 	const milesPerLitre = Number(mpg) / 4.546
 	const poundPerLitre = Number(fuelPrice) / milesPerLitre
 
@@ -23,10 +29,9 @@ const carShare = (mpg, distance, fuelPrice, people) => {
 	// console.log('334'.split('.').length)
 
 	const addZeros = (el) => {
+		el = bigRound(el)
 		const splitted = String(el).split('.')
-		console.log(splitted)
-		console.log(splitted)
-		if (splitted.length === 1) {
+				if (splitted.length === 1) {
 			return splitted + '.00'
 		}
 		if (splitted.length > 1 && splitted[1].length === 1) {
@@ -60,6 +65,8 @@ const CarShare = () => {
 			)
 		)
 	}
+
+	
 
 	const title = (
 		<Box textAlign="center">
@@ -99,7 +106,6 @@ const CarShare = () => {
 							label="37"
 							name="distance"
 							variant="standard"
-							type="number"
 							helperText="Distance in miles"
 						/>
 						<TextField
@@ -111,10 +117,9 @@ const CarShare = () => {
 						/>
 						<TextField
 							id="standard-basic"
-							label="35"
+							label="35.4"
 							name="mpg"
 							variant="standard"
-							type="number"
 							helperText="Miles per Gallon"
 						/>
 						<TextField
