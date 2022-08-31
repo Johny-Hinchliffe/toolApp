@@ -37,7 +37,7 @@ export default function BasicModal({ content, title, button }) {
 				elevation={24}
 			>
 				<Box sx={style}>
-					<Typography id="modal-modal-title" variant="h6" component="h2">
+					<Typography id="modal-modal-title" variant="h5" component="h2" textAlign="center">
 						{title}
 					</Typography>
 					<Typography id="modal-modal-description" textAlign="center" sx={{ mt: 2 }}>

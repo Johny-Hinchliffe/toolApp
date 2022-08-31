@@ -13,7 +13,7 @@ export default function TitlebarImageList() {
   return (
     <ImageList maxWidth='xs' cols={1}  sx={{ width: 375, height: '100vh', minWidth: 275 }}>
       <ImageListItem key="Subheader" cols={1}>
-        <Box textAlign="center" sx={{marginBottom: '-30px'}}>
+        <Box textAlign="center" sx={{marginBottom: '-10px'}}>
 
         <Typography variant='h5' sx={{marginBottom: '10px'}}>Welcome to Tool App!</Typography>
         <Typography variant='subtitle1' sx={{marginBottom: '30px'}}>A variety of random tools to help you with day to day life. Just click the question icon within each tool to learn more.</Typography>

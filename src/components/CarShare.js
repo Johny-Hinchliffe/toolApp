@@ -16,7 +16,7 @@ const carShare = (mpg, distance, fuelPrice, people) => {
 	
 	
 	const milesPerLitre = Number(mpg) / 4.546
-	const poundPerLitre = Number(fuelPrice) / milesPerLitre
+	const poundPerLitre = Number(fuelPrice*100) / milesPerLitre
 
 	const journeyCost = distance * poundPerLitre
 	const round = (el) => Math.ceil(el * 10) / 10
@@ -73,22 +73,22 @@ const CarShare = () => {
 
 	const content = (
 		<Box>
-			<Typography variant="h5">
+			<Typography variant="h6">
 				Total Journey Cost:
 			</Typography>
-			<Typography variant="h5" gutterBottom>
+			<Typography variant="h6" gutterBottom>
 				£{answer.journeyCost}
 			</Typography>
-			<Typography variant="h5">
+			<Typography variant="h6">
 				Cost Per Mile:
 			</Typography>
-			<Typography variant="h5" gutterBottom>
+			<Typography variant="h6" gutterBottom>
 			£{answer.costPerMile}
 			</Typography>
-			<Typography variant="h5">
+			<Typography variant="h6">
 				Cost Per Person:
 			</Typography >
-			<Typography variant="h5">
+			<Typography variant="h6">
 			£{answer.costPerPerson}
 			</Typography >
 			
@@ -110,28 +110,28 @@ const CarShare = () => {
 					<CardContent>
 						<TextField
 							id="standard-basic"
-							label="37"
+							label="37 miles"
 							name="distance"
 							variant="standard"
 							helperText="Distance in miles"
 						/>
 						<TextField
 							id="standard-basic"
-							label="1.699"
+							label="169.9p"
 							name="fuelPrice"
 							variant="standard"
 							helperText="Fuel Price"
 						/>
 						<TextField
 							id="standard-basic"
-							label="35.4"
+							label="35.4 mpg"
 							name="mpg"
 							variant="standard"
 							helperText="Miles per Gallon"
 						/>
 						<TextField
 							id="standard-basic"
-							label="3"
+							label="3 people"
 							name="people"
 							variant="standard"
 							type="number"
