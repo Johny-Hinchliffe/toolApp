@@ -15,6 +15,7 @@ const style = {
 	borderRadius: '20px',
 	boxShadow: 15,
 	p: 4,
+	maxWidth: '70vw'
 }
 
 export default function BasicModal({ content, title, button }) {
@@ -39,7 +40,7 @@ export default function BasicModal({ content, title, button }) {
 					<Typography id="modal-modal-title" variant="h6" component="h2">
 						{title}
 					</Typography>
-					<Typography id="modal-modal-description" sx={{ mt: 2 }}>
+					<Typography id="modal-modal-description" textAlign="center" sx={{ mt: 2 }}>
 						{content}
 					</Typography>
 				</Box>

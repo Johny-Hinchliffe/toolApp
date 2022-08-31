@@ -73,15 +73,25 @@ const CarShare = () => {
 
 	const content = (
 		<Box>
-			<Typography variant="h5" gutterBottom>
-				Total Journey Cost: £{answer.journeyCost}
+			<Typography variant="h5">
+				Total Journey Cost:
 			</Typography>
 			<Typography variant="h5" gutterBottom>
-				Cost Per Mile: £{answer.costPerMile}
+				£{answer.journeyCost}
 			</Typography>
 			<Typography variant="h5">
-				Cost Per Person: £{answer.costPerPerson}
+				Cost Per Mile:
 			</Typography>
+			<Typography variant="h5" gutterBottom>
+			£{answer.costPerMile}
+			</Typography>
+			<Typography variant="h5">
+				Cost Per Person:
+			</Typography >
+			<Typography variant="h5">
+			£{answer.costPerPerson}
+			</Typography >
+			
 		</Box>
 	)
 
