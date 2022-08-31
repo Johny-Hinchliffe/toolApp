@@ -14,7 +14,7 @@ import { styled } from '@mui/material/styles'
 
 const AccordionSummary = styled((props) => (
 	<MuiAccordionSummary
-		expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+		expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '50px' }} />}
 		{...props}
 	/>
 ))(({ theme }) => ({
@@ -41,14 +41,15 @@ const AccordionItem = ({ title, content }) => {
 					>
 		<Accordion elevation={0} sx={{backgroundColor: 'transparent'}}>
 			<AccordionSummary
-				expandIcon={<HelpOutlineIcon />}
+				expandIcon={<ExpandMoreIcon size='large' sx={{fontSize: '50px'}} />}
 				aria-controls="panel1a-content"
 				id="panel1a-header"
+				
 				>
-				<Typography variant='h4'>{title}</Typography>
+				<Typography  variant='h4'>{title}</Typography>
 			</AccordionSummary>
 			<AccordionDetails>
-				<Typography>{content}</Typography>
+				<Typography >{content}</Typography>
 			</AccordionDetails>
 		</Accordion>
 				</Box>

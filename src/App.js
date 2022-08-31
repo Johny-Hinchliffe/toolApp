@@ -10,14 +10,15 @@ import ContentLayout from './components/mini-components/ContentLayout'
 import AgeCompare from './components/AgeCompare'
 import Settings from './components/Settings'
 import CoinFlip from './components/CoinFlip'
+import CarShare from './components/CarShare'
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App"style={{height: '100vh'}}>
 			<BrowserRouter>
 				<MainStore>
 					<ThemeProvider theme={theme}>
-						<SearchMenu title={'Tool App'} anchor={'left'} />
+						<SearchMenu  title={'Tool App'} anchor={'left'} />
 						<Routes>
 							<Route
 								path="/"
@@ -37,6 +38,9 @@ function App() {
 							/>
 							<Route path="/coin-flip" element={<ContentLayout content={<CoinFlip />}/>} />
 							<Route path="/settings" element={<ContentLayout content={<Settings />}/>} />
+							<Route path="/car-share" element={<ContentLayout content={<CarShare />}/>} />
+							
+							
 						</Routes>
 					</ThemeProvider>
 				</MainStore>

@@ -16,13 +16,15 @@ import {
 	TagFaces as JokesIcon,
 	CompareArrows as CompareArrowsIcon,
 	Settings as SettingsIcon,
-	MonetizationOnOutlined as MonetizationOnOutlinedIcon
+	MonetizationOnOutlined as MonetizationOnOutlinedIcon,
+	LocalGasStation as LocalGasStationIcon
 } from '@mui/icons-material'
 
 import Drawer from './Drawer'
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
+	margin:'0px',
 	borderRadius: theme.shape.borderRadius,
 	backgroundColor: alpha(theme.palette.common.white, 0.15),
 	'&:hover': {
@@ -53,6 +55,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 		// vertical padding + font size from searchIcon
 		paddingLeft: `calc(1em + ${theme.spacing(4)})`,
 		transition: theme.transitions.create('width'),
+		
 		width: '100%',
 		[theme.breakpoints.up('sm')]: {
 			width: '12ch',
@@ -68,6 +71,7 @@ const menuList1 = [
 	['Pizza Time', <PizzaIcon />],
 	['Dad Jokes', <JokesIcon />],
 	['Age Compare', <CompareArrowsIcon />],
+	['Car Share', <LocalGasStationIcon/>],
 	['Coin Flip', < MonetizationOnOutlinedIcon/>]
 ]
 
@@ -91,7 +95,7 @@ export default function SearchAppBar({ title, anchor }) {
 	}, [search])
 
 	return (
-		<Box sx={{ flexGrow: 1, margin: -0.1 }}>
+		<Box sx={{ flexGrow: 1, margin: -1 }}>
 			<AppBar position="static">
 				<Toolbar>
 					<Drawer menuList1={menuList1} menuList2={menuList2} anchor={anchor} />

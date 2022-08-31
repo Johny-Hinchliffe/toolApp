@@ -15,8 +15,8 @@ export default function TitlebarImageList() {
       <ImageListItem key="Subheader" cols={1}>
         <Box textAlign="center" sx={{marginBottom: '-30px'}}>
 
-        <Typography variant='h5'>Welcome to Tool App!</Typography>
-        <Typography variant='subtitle1'>A variety of random tools to help you with day to day life. Just click the question icon within each tool to learn more.</Typography>
+        <Typography variant='h5' sx={{marginBottom: '10px'}}>Welcome to Tool App!</Typography>
+        <Typography variant='subtitle1' sx={{marginBottom: '30px'}}>A variety of random tools to help you with day to day life. Just click the question icon within each tool to learn more.</Typography>
         </Box>
       </ImageListItem>
       {itemData.map((item) => (
@@ -48,6 +48,11 @@ const itemData = [
     img: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     title: 'Pizza Time',
     author: 'Which gives more Pizza?',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1468818438311-4bab781ab9b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80',
+    title: 'Car Share',
+    author: 'Easiest way to split the fuel cost',
   },
   {
     img: 'https://images.unsplash.com/photo-1616705334775-bb7739245489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
